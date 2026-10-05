@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="orthoGradSq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <linearGradient id="glowSq" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="softGlowSq" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded box -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+  <rect width="508" height="508" x="2" y="2" rx="126" stroke="#334155" stroke-width="3" fill="none" opacity="0.6" />
+
+  <!-- Center Ergonomic Spine Wave Icon -->
+  <g transform="translate(106, 120) scale(3.2)">
+    <!-- Outer Glow Wave -->
+    <path d="M 12,48 C 22,20 42,16 52,34 C 60,48 76,46 84,28" 
+          stroke="url(#glowSq)" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.5" filter="url(#softGlowSq)" />
+    
+    <!-- Sharp Core Wave -->
+    <path d="M 12,48 C 22,20 42,16 52,34 C 60,48 76,46 84,28" 
+          stroke="url(#orthoGradSq)" stroke-width="6" stroke-linecap="round" fill="none" />
+    
+    <!-- 7 Vertebral Acupressure Nodes (C1 - C7) -->
+    <circle cx="14" cy="46" r="3.5" fill="#38BDF8" />
+    <circle cx="28" cy="24" r="3.2" fill="#38BDF8" />
+    <circle cx="42" cy="22" r="3.8" fill="#60A5FA" />
+    <circle cx="52" cy="34" r="5" fill="#818CF8" filter="url(#softGlowSq)" />
+    <circle cx="62" cy="44" r="3.8" fill="#60A5FA" />
+    <circle cx="74" cy="38" r="3.2" fill="#38BDF8" />
+    <circle cx="84" cy="28" r="3.5" fill="#38BDF8" />
+    
+    <!-- Heart of Alignment Center -->
+    <circle cx="52" cy="34" r="2.2" fill="#FFFFFF" />
+  </g>
+
+  <!-- Brand Typography bottom -->
+  <text x="256" y="420" font-family="system-ui, -apple-system, sans-serif" font-size="44" font-weight="900" letter-spacing="-0.5" fill="#FFFFFF" text-anchor="middle">
+    ORTHO<tspan fill="url(#orthoGradSq)">CLOUD</tspan>
+  </text>
+  <text x="256" y="450" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" letter-spacing="4.5" fill="#94A3B8" text-anchor="middle">
+    CERVICAL RELIEF
+  </text>
+</svg>

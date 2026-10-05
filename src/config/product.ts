@@ -51,63 +51,63 @@ export interface StoreConfig {
 }
 
 export const storeConfig: StoreConfig = {
-  storeName: "DermaSpine™",
-  tagline: "Ergonomic Orthopedic Relief & Deep Sleep Technology",
-  supportEmail: "support@dermaspine.com",
-  supportPhone: "+1 (800) 492-3819",
+  storeName: "OrthoCloud™",
+  tagline: "Anatomical Cervical Traction & Decompression Cradle",
+  supportEmail: "support@orthocloud.shop",
+  supportPhone: "+1 (800) 842-1928",
   supportHours: "Mon-Fri: 9am - 6pm EST",
   currency: "USD",
   currencySymbol: "$",
-  domain: "https://dermaspine.com",
+  domain: "https://orthocloud.shop",
   returnDays: 30,
-  guaranteeHeadline: "30-Night Risk-Free Sleep Guarantee",
-  announcementText: "⚡ FLASH SALE: 50% OFF + FREE USPS SHIPPING ON ORDERS OVER $60",
-  urgencyStockRemaining: 17,
+  guaranteeHeadline: "30-Night Risk-Free Alignment Guarantee",
+  announcementText: "⚡ FLASH SALE: 50% OFF + FREE USPS PRIORITY SHIPPING ON ORDERS OVER $60",
+  urgencyStockRemaining: 14,
 };
 
 export const productConfig = {
-  id: "dermaspine-cervical-pillow",
-  handle: "orthopedic-cervical-contour-pillow",
-  name: "DermaSpine™ Orthopedic Cervical Contour Pillow",
-  tagline: "Wake Up Pain-Free: Doctor-Approved Spinal Alignment & Zero Neck Stiffness",
-  badge: "🏆 #1 Doctor Recommended for Neck & Spine Pain",
-  rating: 4.93,
-  reviewCount: 1482,
+  id: "orthocloud-cervical-traction-cradle",
+  handle: "smart-cervical-traction-cradle",
+  name: "OrthoCloud™ Smart Acupressure Cervical Traction Cradle",
+  tagline: "Release 8 Hours of Desk Strain in 10 Minutes: Restores Natural C1-C7 Curvature & Melts Upper Trap Tension",
+  badge: "🏆 #1 Chiropractor-Approved Home Decompression Device",
+  rating: 4.95,
+  reviewCount: 1840,
   price: 49.99,
   originalPrice: 99.99,
-  category: "Health & Personal Care > Sleeping Aids > Pillows",
-  googleCategoryId: "Sleep & Bedding > Bed Pillows",
+  category: "Health & Personal Care > Medical Supplies > Braces & Supports > Neck Supports",
+  googleCategoryId: "Health & Beauty > Health Care > Supports & Braces",
   
   images: [
-    "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1629949009765-40fc74c950ec?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1540518614846-7ede433c4ef4?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=1000&q=80"
+    "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1000&q=80",
+    "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1000&q=80"
   ],
 
   variants: [
     {
-      id: "var-arctic-white",
-      name: "Arctic Ice White",
-      sku: "DSP-PIL-WHT-01",
-      color: "#F8FAFC",
-      image: "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?auto=format&fit=crop&w=800&q=80",
+      id: "var-ortho-blue",
+      name: "Clinical Ortho Blue",
+      sku: "OCL-TRC-BLU-01",
+      color: "#0284C7",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
       inStock: true
     },
     {
-      id: "var-charcoal-grey",
-      name: "Cooling Slate Grey",
-      sku: "DSP-PIL-GRY-02",
-      color: "#475569",
-      image: "https://images.unsplash.com/photo-1629949009765-40fc74c950ec?auto=format&fit=crop&w=800&q=80",
-      inStock: true
-    },
-    {
-      id: "var-midnight-navy",
-      name: "Midnight Recovery Navy",
-      sku: "DSP-PIL-NAV-03",
+      id: "var-slate-onyx",
+      name: "Onyx Carbon Slate",
+      sku: "OCL-TRC-BLK-02",
       color: "#1E293B",
-      image: "https://images.unsplash.com/photo-1540518614846-7ede433c4ef4?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+      inStock: true
+    },
+    {
+      id: "var-rose-quartz",
+      name: "Rose Quartz Gentle",
+      sku: "OCL-TRC-PNK-03",
+      color: "#F472B6",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
       inStock: true
     }
   ] as ProductVariant[],
@@ -116,7 +116,7 @@ export const productConfig = {
     {
       id: "bundle-1",
       quantity: 1,
-      title: "1x Starter Relief Pack",
+      title: "1x Solo Relief Cradle",
       badge: undefined,
       pricePerUnit: 49.99,
       totalPrice: 49.99,
@@ -128,7 +128,7 @@ export const productConfig = {
     {
       id: "bundle-2",
       quantity: 2,
-      title: "2x Couples Dream Pack",
+      title: "2x Couples / Home & Office Pack",
       badge: "🔥 MOST POPULAR (Save $130)",
       pricePerUnit: 39.99,
       totalPrice: 79.98,
@@ -136,12 +136,12 @@ export const productConfig = {
       savingsPercent: 60,
       freeShipping: true,
       popular: true,
-      freeBonus: "Free 2x Breathable Sleep Masks ($29 Value)"
+      freeBonus: "Free 2x Orthopedic Posture Guides ($39 Value)"
     },
     {
       id: "bundle-3",
       quantity: 3,
-      title: "3x Ultimate Family Pack",
+      title: "3x Family Alignment Pack",
       badge: "💎 BEST VALUE (Save $200)",
       pricePerUnit: 33.33,
       totalPrice: 99.99,
@@ -149,79 +149,79 @@ export const productConfig = {
       savingsPercent: 67,
       freeShipping: true,
       popular: false,
-      freeBonus: "Free Priority Insured Shipping + 3x Sleep Masks"
+      freeBonus: "Free Priority Insured Shipping + 3x Acupressure Charts"
     }
   ] as ProductBundle[],
 
   orderBump: {
     id: "bump-vip-warranty",
-    title: "Lifetime Replacement & Damage Warranty",
+    title: "Lifetime Replacement & Structural Integrity Warranty",
     price: 4.99,
-    description: "Accidentally tore it, spilled coffee, or memory foam lost bounce? Get a free 1-click replacement anytime for life. No questions asked."
+    description: "Accidentally damaged, chewed by a pet, or lost bounce? Get an instant free 1-click replacement anytime for life. No return required."
   },
 
   postPurchaseUpsell: {
     id: "upsell-silk-pillowcase",
-    title: "100% Mulberry Silk Cooling Pillowcase",
+    title: "100% Mulberry Silk Cooling Orthopedic Slip Sleeve",
     originalPrice: 49.99,
-    salePrice: 24.99,
-    discountPercent: 50,
-    sku: "DSP-SILK-CASE-01",
+    salePrice: 19.99,
+    discountPercent: 60,
+    sku: "OCL-SILK-CASE-01",
     image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
-    description: "Specially contoured to fit the DermaSpine pillow. Anti-aging, zero sleep-wrinkles, hypoallergenic and keeps you 4.5°F cooler all night long.",
-    urgencySeconds: 600 // 10 minutos
+    description: "Custom contoured to fit the OrthoCloud cradle. Ultra-soft breathable mulberry silk keeps skin 4.5°F cooler and protects the high-density foam core.",
+    urgencySeconds: 600
   },
 
   features: [
     {
       icon: "ShieldCheck",
-      title: "Cervical Alignment Zone",
-      description: "Center cavity gently cradles your head while preserving the natural forward curvature of the cervical spine."
+      title: "C-Shape Gravity Decompression",
+      description: "Uses your head's natural 12-lb weight to gently stretch and decompress C1-C7 cervical discs without harsh mechanical pulleys."
     },
     {
       icon: "Sparkles",
-      title: "Slow-Rebound Memory Foam",
-      description: "High-density 50D memory foam contours to your unique anatomy, distributing pressure evenly across muscles."
+      title: "6 Anatomical Acupressure Nodes",
+      description: "Target key trigger points along the suboccipital and trapezius muscles to release chronic tension headaches and neck knots."
     },
     {
       icon: "Wind",
-      title: "Air-Flow Cooling Mesh Cover",
-      description: "3D honeycomb fabric maximizes ventilation to prevent night sweats and keep you fresh."
+      title: "Dual Traction Levels (Gentle & Strong)",
+      description: "Convex side provides mild traction for beginners, while the concave side provides deeper cervical curve restoration."
     },
     {
       icon: "Moon",
-      title: "All Sleep Positions Supported",
-      description: "Optimized contours provide ergonomic neck relief for side sleepers, back sleepers, and stomach sleepers."
+      title: "10-Minute Daily Reset",
+      description: "Just 10 minutes lying down on your yoga mat or carpet restores natural lordotic curvature after 8 hours of hunching."
     }
   ],
 
   comparisons: [
     {
-      feature: "Ortopedic Cervical Alignment Contour",
+      feature: "Passive Gravity Acupressure Decompression",
       ours: true,
       standard: false,
       feather: false
     },
     {
-      feature: "High-Density 50D Slow-Rebound Foam",
+      feature: "Suboccipital Trigger Point Node Array",
       ours: true,
       standard: false,
       feather: false
     },
     {
-      feature: "Zero-Flattening Guarantee (3+ Years)",
+      feature: "Dual Traction Orientation (Gentle vs Deep)",
       ours: true,
       standard: false,
       feather: false
     },
     {
-      feature: "3D Air-Flow Thermal Regulation",
+      feature: "Zero Electricity / No Wires / Indestructible Core",
       ours: true,
       standard: false,
       feather: false
     },
     {
-      feature: "30-Night Risk-Free Sleep Trial",
+      feature: "30-Night Risk-Free Posture Guarantee",
       ours: true,
       standard: false,
       feather: false
@@ -230,24 +230,24 @@ export const productConfig = {
 
   faqs: [
     {
-      question: "How does the DermaSpine pillow stop neck and shoulder pain?",
-      answer: "Traditional flat pillows push your head too far forward or let it sink unevenly, placing immense pressure on your C1-C7 vertebrae and pinching cervical nerves. DermaSpine features a precision-sculpted hollow center and lateral contour zones that lock your spine in neutral cervical alignment whether you sleep on your back or side."
+      question: "How does the OrthoCloud relieve neck and shoulder tension?",
+      answer: "When sitting at a desk or looking down at a smartphone, your cervical spine supports up to 60 pounds of unnatural force. OrthoCloud's ergonomic C-shaped arc uses natural gravity traction to gently elongate and decompress the vertebrae, taking pressure off pinched nerves and releasing tight knots in the trapezius muscles."
     },
     {
-      question: "How long does it take to see results?",
-      answer: "Most customers feel noticeable relief from morning stiffness and tension headaches within the first 1 to 3 nights. Because your cervical spine is adapting to proper posture, allow 5-7 days for complete muscular relaxation."
+      question: "How long should I use it each day?",
+      answer: "We recommend starting with just 5 minutes on the gentle (convex) side for your first 3 days. Once your neck muscles relax, increase to 10-15 minutes once or twice per day. Note: Do not sleep on it as a regular pillow all night; it is an active 10-minute restoration device."
     },
     {
-      question: "Is it suitable for side, back, and stomach sleepers?",
-      answer: "Yes! The multi-tier ergonomic architecture features two height options (4.1 inches on one side and 4.9 inches on the other) plus specialized armrest cutouts designed specifically for both side and back sleepers."
+      question: "Can I use this if I have chronic desk tension or headaches?",
+      answer: "Yes! Most tension headaches originate from hyper-tight suboccipital muscles at the base of the skull. The targeted pressure nodes specifically press into those reflexology points to melt headache-causing strain."
     },
     {
-      question: "How fast is shipping and where does it ship from?",
-      answer: "All US orders are processed within 24 hours and shipped via USPS Priority with real-time tracking. Typical delivery time across the continental US is 3 to 5 business days."
+      question: "Where does it ship from and how fast is delivery?",
+      answer: "All US orders are dispatched within 24 hours from our domestic warehouse in the United States and delivered via USPS Priority within 3 to 5 business days with full door-to-door tracking."
     },
     {
-      question: "What if it doesn't work for me? Can I return it?",
-      answer: "We offer an unconditional 30-Night Risk-Free Sleep Guarantee. If you are not waking up feeling refreshed and pain-free, simply email support@dermaspine.com and our team will issue a 100% full refund immediately."
+      question: "What is your refund policy?",
+      answer: "We offer an unconditional 30-Night Risk-Free Alignment Guarantee. If your neck doesn't feel significantly lighter and pain-free within 30 days, email support@orthocloud.shop for a 100% full refund with zero hassle."
     }
   ],
 
@@ -258,25 +258,25 @@ export const productConfig = {
       location: "Austin, Texas",
       rating: 5,
       date: "2 days ago",
-      title: "Finally woke up without a crippling headache!",
-      content: "I have suffered from cervical spine tension for 4 years. Spent hundreds on chiropractic adjustments. After only two nights on this pillow, my morning neck stiffness is 95% gone. Unbelievable difference.",
+      title: "Finally woke up without a burning neck knot!",
+      content: "I work 9 hours a day coding at my desk. My neck used to burn every evening and I spent $140 every week at the chiropractor. After just 3 days using OrthoCloud for 10 minutes on the rug, my trap muscles are totally relaxed. It feels like an in-person spinal adjustment.",
       verified: true,
       userImage: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
-      productVariant: "Cooling Slate Grey",
-      helpfulCount: 42
+      productVariant: "Clinical Ortho Blue",
+      helpfulCount: 54
     },
     {
       id: "rev-2",
       author: "Dr. David Richardson",
       location: "San Diego, California",
       rating: 5,
-      date: "5 days ago",
-      title: "Physical Therapist approved — I recommend it to all my patients",
-      content: "As a practicing physical therapist, cervical lordosis maintenance during 8 hours of sleep is critical. The contour angle on DermaSpine maintains optimal cervical traction without over-extension.",
+      date: "4 days ago",
+      title: "Physical Therapist approved — I recommend it to all desk workers",
+      content: "Forward head posture is epidemic in modern office life. Passive traction with the correct lordotic radius allows the anterior longitudinal ligament to gently remodel. OrthoCloud nailed the exact anatomical curvature.",
       verified: true,
       userImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
-      productVariant: "Arctic Ice White",
-      helpfulCount: 89
+      productVariant: "Onyx Carbon Slate",
+      helpfulCount: 98
     },
     {
       id: "rev-3",
@@ -284,12 +284,12 @@ export const productConfig = {
       location: "Miami, Florida",
       rating: 5,
       date: "1 week ago",
-      title: "Worth every penny, bought two more for my parents",
-      content: "I am a strict side-sleeper and regular pillows always squished my shoulders. The arm contour indents on this pillow are genius. My husband tried mine and stole it, so I ordered the 2-pack for my parents as well.",
+      title: "Worth every penny, bought two more for my husband and mom",
+      content: "The pressure points on the cradle hit right at the base of the skull where my tension headaches start. 10 minutes before bed and I feel an immediate wave of relief. Highly recommended!",
       verified: true,
       userImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
-      productVariant: "Midnight Recovery Navy",
-      helpfulCount: 31
+      productVariant: "Rose Quartz Gentle",
+      helpfulCount: 41
     },
     {
       id: "rev-4",
@@ -297,18 +297,18 @@ export const productConfig = {
       location: "Denver, Colorado",
       rating: 5,
       date: "2 weeks ago",
-      title: "High quality memory foam that doesn't collapse",
-      content: "Cheap memory foam from Amazon goes flat after 30 minutes. This one stays firm yet soft enough to relieve pressure points all night. The cooling mesh cover actually works and doesn't get hot.",
+      title: "Super durable medical foam, doesn't sink or collapse",
+      content: "I bought a cheap $15 knockoff on Amazon before and it flattened into a pancake after two days. OrthoCloud is made of ultra-dense medical self-skinning foam. Holds firm and gives genuine traction stretch.",
       verified: true,
       userImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
-      productVariant: "Arctic Ice White",
-      helpfulCount: 19
+      productVariant: "Clinical Ortho Blue",
+      helpfulCount: 29
     }
   ] as ProductReview[],
 
   dropshipping: {
-    cjSku: "CJ-DERMA-PIL-001",
-    teemdropSku: "TD-DERMA-PIL-001",
-    weightGrams: 850
+    cjSku: "CJ-ORTHO-TRAC-001",
+    teemdropSku: "TD-ORTHO-TRAC-001",
+    weightGrams: 340
   }
 };

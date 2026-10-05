@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, HelpCircle } from "lucide-react";
-import { productConfig } from "@/config/product";
+import { productConfig, storeConfig } from "@/config/product";
 
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -23,7 +23,7 @@ export function FaqSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-xs sm:text-sm text-gray-500 mt-2">
-            Everything you need to know about the DermaSpine™ Pillow &amp; 30-night trial.
+            Everything you need to know about {storeConfig.storeName} &amp; our 30-night trial.
           </p>
         </div>
 

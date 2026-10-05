@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" fill="none">
+  <defs>
+    <linearGradient id="orthoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+    <linearGradient id="cloudGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0.8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem Icon: Cervical Spine Ergonomic Traction Wave with Acupressure Nodes -->
+  <g transform="translate(10, 8)">
+    <path d="M 12,48 C 22,20 42,16 52,34 C 60,48 76,46 84,28" 
+          stroke="url(#cloudGlow)" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.3" />
+    <path d="M 12,48 C 22,20 42,16 52,34 C 60,48 76,46 84,28" 
+          stroke="url(#orthoGrad)" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <circle cx="14" cy="46" r="3.5" fill="#0284C7" />
+    <circle cx="28" cy="24" r="3" fill="#0284C7" />
+    <circle cx="42" cy="22" r="3.5" fill="#2563EB" />
+    <circle cx="52" cy="34" r="4.5" fill="#4F46E5" />
+    <circle cx="62" cy="44" r="3.5" fill="#2563EB" />
+    <circle cx="74" cy="38" r="3" fill="#0284C7" />
+    <circle cx="84" cy="28" r="3.5" fill="#0284C7" />
+    <circle cx="52" cy="34" r="2" fill="#FFFFFF" />
+  </g>
+
+  <!-- Brand Typography (for light backgrounds) -->
+  <g transform="translate(105, 50)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="900" letter-spacing="-0.5" fill="#0F172A">
+      ORTHO
+    </text>
+    <text x="114" y="0" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="30" font-weight="900" letter-spacing="-0.5" fill="url(#orthoGrad)">
+      CLOUD
+    </text>
+    <text x="224" y="-12" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="800" fill="#2563EB">
+      ™
+    </text>
+  </g>
+
+  <g transform="translate(107, 66)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.4" fill="#64748B">
+      CLINICAL CERVICAL TRACTION
+    </text>
+  </g>
+</svg>

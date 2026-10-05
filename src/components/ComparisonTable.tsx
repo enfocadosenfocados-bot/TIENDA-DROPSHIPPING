@@ -1,5 +1,5 @@
 import { Check, X, ShieldCheck } from "lucide-react";
-import { productConfig } from "@/config/product";
+import { productConfig, storeConfig } from "@/config/product";
 
 export function ComparisonTable() {
   return (
@@ -11,7 +11,7 @@ export function ComparisonTable() {
             Clinical Comparison
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight mt-3">
-            See How DermaSpine™ Outperforms Regular Pillows
+            See How {storeConfig.storeName} Outperforms Traditional Alternatives
           </h2>
         </div>
 
@@ -24,17 +24,17 @@ export function ComparisonTable() {
                 </th>
                 <th className="p-4 bg-blue-600 text-white text-center w-1/4 rounded-t-xl">
                   <div className="font-black text-sm sm:text-base tracking-tight">
-                    DermaSpine™
+                    {storeConfig.storeName}
                   </div>
                   <span className="text-[10px] text-blue-200 block uppercase font-bold">
-                    Orthopedic Standard
+                    Targeted Decompression
                   </span>
                 </th>
                 <th className="p-4 text-gray-600 text-center text-xs font-bold w-1/4">
-                  Generic Amazon Foam
+                  $120/mo Chiropractor
                 </th>
                 <th className="p-4 text-gray-600 text-center text-xs font-bold w-1/4">
-                  Standard Feather
+                  Flat Pillows &amp; Foam
                 </th>
               </tr>
             </thead>
@@ -48,7 +48,7 @@ export function ComparisonTable() {
                     {item.feature}
                   </td>
                   
-                  {/* DermaSpine Column */}
+                  {/* OrthoCloud Column */}
                   <td className="p-4 bg-blue-50/70 text-center">
                     <div className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-blue-600 text-white shadow-sm">
                       <Check className="w-4 h-4 stroke-[3]" />

@@ -83,7 +83,7 @@ function UpsellContent() {
               Upgrade to the {upsell.title}
             </h1>
             <p className="text-xs sm:text-sm text-gray-600 max-w-lg mx-auto">
-              Specially contoured to fit your new DermaSpine™ Pillow. Prevents morning sleep lines, hair frizz, and regulates skin temperature.
+              Specially contoured to wrap your new OrthoCloud™ Cradle. Ultra-soft breathable touch that protects the acupressure nodes and elevates your relief session.
             </p>
           </div>
 
@@ -122,11 +122,11 @@ function UpsellContent() {
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Stays 4.5°F cooler all night to eliminate hot flashes</span>
+              <span>Stays 4.5°F cooler to soothe inflamed neck muscles</span>
             </div>
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-              <span>Custom tailored to DermaSpine cervical contours</span>
+              <span>Custom tailored to OrthoCloud™ cervical traction contours</span>
             </div>
           </div>
 

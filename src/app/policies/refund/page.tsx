@@ -8,12 +8,12 @@ export default function RefundPolicyPage() {
         <Link href="/" className="text-xs text-blue-600 hover:underline font-bold block mb-4">
           &larr; Back to {storeConfig.storeName}
         </Link>
-        <h1 className="text-2xl sm:text-3xl font-black text-gray-900">30-Night Sleep Trial &amp; Return Policy</h1>
+        <h1 className="text-2xl sm:text-3xl font-black text-gray-900">30-Day Risk-Free Trial &amp; Return Policy</h1>
         <p className="text-xs text-gray-400">Last updated: October 2026</p>
 
         <section className="space-y-2">
-          <h2 className="font-bold text-gray-900 text-base">1. 30-Night Risk-Free Trial</h2>
-          <p>We are confident that DermaSpine™ will transform your sleep. Sleep on it for up to 30 nights. If you are not waking up feeling refreshed and free from cervical tension, you are entitled to a 100% full refund.</p>
+          <h2 className="font-bold text-gray-900 text-base">1. 30-Day Risk-Free Trial</h2>
+          <p>We are confident that {storeConfig.storeName} will relieve your neck and shoulder tension. Test it for up to 30 days. If you are not feeling noticeable cervical relief, you are entitled to a 100% full refund.</p>
         </section>
 
         <section className="space-y-2">

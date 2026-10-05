@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ShieldCheck, Lock, Mail, Phone } from "lucide-react";
 import { storeConfig } from "@/config/product";
@@ -10,9 +11,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Info */}
           <div className="space-y-3">
-            <span className="text-lg font-black text-white block">
-              {storeConfig.storeName}
-            </span>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/logo-dark.svg"
+                alt="OrthoCloud™"
+                width={180}
+                height={45}
+                className="h-9 w-auto object-contain"
+              />
+            </Link>
             <p className="text-gray-400 text-xs leading-relaxed">
               {storeConfig.tagline}. Designed in collaboration with biomechanical and chiropractic specialists.
             </p>
