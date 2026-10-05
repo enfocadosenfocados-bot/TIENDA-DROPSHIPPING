@@ -25,14 +25,62 @@ export interface OrderFulfillmentPayload {
   note?: string;
 }
 
+// Cache en memoria para el token de acceso de CJ Dropshipping (válido por 180 días)
+let cachedCjAccessToken: string | null = null;
+let cjTokenExpiresAt: number = 0;
+
 /**
- * Envia orden a CJ Dropshipping Open API v2.0
+ * Obtiene el CJ-Access-Token automáticamente usando la CJ_API_KEY
+ */
+export async function getCjAccessToken(): Promise<string | null> {
+  // 1. Si ya se pasó un token estático en las variables de entorno, usarlo directamente
+  if (process.env.CJ_DROPSHIPPING_ACCESS_TOKEN) {
+    return process.env.CJ_DROPSHIPPING_ACCESS_TOKEN;
+  }
+
+  // 2. Si el token en memoria sigue vigente (con 1 hora de margen de seguridad), usarlo
+  if (cachedCjAccessToken && Date.now() < cjTokenExpiresAt - 3600 * 1000) {
+    return cachedCjAccessToken;
+  }
+
+  const apiKey = process.env.CJ_API_KEY;
+  if (!apiKey) {
+    return null;
+  }
+
+  try {
+    const res = await fetch("https://developers.cjdropshipping.com/api2.0/v1/authentication/getAccessToken", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ apiKey }),
+    });
+
+    const data = await res.json();
+    if (data.result && data.data?.accessToken) {
+      cachedCjAccessToken = data.data.accessToken;
+      // Guardar tiempo de expiración (generalmente 180 días o según data.data.accessTokenExpiryDate)
+      const expiryDays = 180;
+      cjTokenExpiresAt = Date.now() + expiryDays * 24 * 60 * 60 * 1000;
+      console.log("[CJ Dropshipping] Access Token obtenido exitosamente vía API Key.");
+      return cachedCjAccessToken;
+    } else {
+      console.error("[CJ Dropshipping Auth Error]", data.message || data);
+      return null;
+    }
+  } catch (err) {
+    console.error("[CJ Dropshipping Auth Fetch Error]", err);
+    return null;
+  }
+}
+
+/**
+ * Envia orden a CJ Dropshipping Open API v2.0 de manera 100% automatizada
  */
 export async function sendOrderToCjDropshipping(order: OrderFulfillmentPayload) {
-  const cjToken = process.env.CJ_DROPSHIPPING_ACCESS_TOKEN;
+  const cjToken = await getCjAccessToken();
 
   if (!cjToken) {
-    console.warn("[CJ Dropshipping] Token not configured. Simulated fulfillment for order:", order.orderId);
+    console.warn("[CJ Dropshipping] Ni CJ_API_KEY ni CJ_DROPSHIPPING_ACCESS_TOKEN configurados. Despacho simulado para orden:", order.orderId);
     return { success: true, simulated: true, provider: "CJ Dropshipping" };
   }
 
@@ -64,9 +112,14 @@ export async function sendOrderToCjDropshipping(order: OrderFulfillmentPayload) 
     });
 
     const data = await res.json();
+    if (data.result) {
+      console.log(`[CJ Dropshipping] ¡Orden ${order.orderId} creada y despachada con éxito en CJ! CJ Order ID: ${data.data?.orderId}`);
+    } else {
+      console.warn(`[CJ Dropshipping Warning] La API respondió:`, data.message);
+    }
     return { success: data.result || res.ok, data, provider: "CJ Dropshipping" };
   } catch (error) {
-    console.error("[CJ Dropshipping Error]", error);
+    console.error("[CJ Dropshipping Order Creation Error]", error);
     return { success: false, error, provider: "CJ Dropshipping" };
   }
 }
