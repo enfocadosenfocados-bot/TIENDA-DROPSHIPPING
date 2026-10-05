@@ -53,12 +53,12 @@ export interface StoreConfig {
 export const storeConfig: StoreConfig = {
   storeName: "OrthoCloud™",
   tagline: "Anatomical Cervical Traction & Decompression Cradle",
-  supportEmail: "support@orthocloud.shop",
+  supportEmail: "support@orthocloudrelief.com",
   supportPhone: "+1 (800) 842-1928",
   supportHours: "Mon-Fri: 9am - 6pm EST",
   currency: "USD",
   currencySymbol: "$",
-  domain: "https://orthocloud.shop",
+  domain: "https://orthocloudrelief.com",
   returnDays: 30,
   guaranteeHeadline: "30-Night Risk-Free Alignment Guarantee",
   announcementText: "⚡ FLASH SALE: 50% OFF + FREE USPS PRIORITY SHIPPING ON ORDERS OVER $60",
@@ -247,7 +247,7 @@ export const productConfig = {
     },
     {
       question: "What is your refund policy?",
-      answer: "We offer an unconditional 30-Night Risk-Free Alignment Guarantee. If your neck doesn't feel significantly lighter and pain-free within 30 days, email support@orthocloud.shop for a 100% full refund with zero hassle."
+      answer: "We offer an unconditional 30-Night Risk-Free Alignment Guarantee. If your neck doesn't feel significantly lighter and pain-free within 30 days, email support@orthocloudrelief.com for a 100% full refund with zero hassle."
     }
   ],
 
