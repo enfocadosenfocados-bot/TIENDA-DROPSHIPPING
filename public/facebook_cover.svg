@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 624" width="1640" height="624" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090E17" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1640" height="624" fill="url(#bgGrad)" />
+  <circle cx="1300" cy="280" r="380" fill="url(#glowGrad)" />
+  <circle cx="200" cy="100" r="240" fill="url(#glowGrad)" opacity="0.4" />
+
+  <!-- Grid Lines Accent -->
+  <g stroke="#334155" stroke-width="1" opacity="0.15">
+    <line x1="0" y1="156" x2="1640" y2="156" />
+    <line x1="0" y1="312" x2="1640" y2="312" />
+    <line x1="0" y1="468" x2="1640" y2="468" />
+    <line x1="410" y1="0" x2="410" y2="624" />
+    <line x1="820" y1="0" x2="820" y2="624" />
+    <line x1="1230" y1="0" x2="1230" y2="624" />
+  </g>
+
+  <!-- Left Content: Branding & Value Props -->
+  <g transform="translate(140, 130)">
+    <!-- Badge -->
+    <rect x="0" y="0" width="380" height="36" rx="18" fill="#1E293B" stroke="#0284C7" stroke-width="1.5" />
+    <circle cx="20" cy="18" r="6" fill="#38BDF8" filter="url(#softGlow)" />
+    <text x="36" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#38BDF8" letter-spacing="1">
+      #1 CHIROPRACTOR-APPROVED HOME DEVICE
+    </text>
+
+    <!-- Main Headline -->
+    <text x="0" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" letter-spacing="-1">
+      ORTHO<tspan fill="url(#brandGrad)">CLOUD</tspan><tspan fill="#38BDF8" font-size="24" dy="-20">™</tspan>
+    </text>
+    
+    <text x="0" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#E2E8F0">
+      Smart Acupressure Cervical Traction Cradle
+    </text>
+
+    <text x="0" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="500" fill="#94A3B8">
+      Restore natural C1-C7 lordotic curvature &amp; melt 8 hours of desk strain in 10 minutes.
+    </text>
+
+    <!-- 3 Bullet Points -->
+    <g transform="translate(0, 230)">
+      <!-- Bullet 1 -->
+      <g transform="translate(0, 0)">
+        <circle cx="12" cy="12" r="10" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5" />
+        <path d="M 8,12 L 11,15 L 16,8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="32" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700" fill="#F1F5F9">
+          10-Minute Gravitational Decompression
+        </text>
+      </g>
+
+      <!-- Bullet 2 -->
+      <g transform="translate(340, 0)">
+        <circle cx="12" cy="12" r="10" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5" />
+        <path d="M 8,12 L 11,15 L 16,8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="32" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700" fill="#F1F5F9">
+          Fast 3-Day USPS US Delivery
+        </text>
+      </g>
+
+      <!-- Bullet 3 -->
+      <g transform="translate(620, 0)">
+        <circle cx="12" cy="12" r="10" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5" />
+        <path d="M 8,12 L 11,15 L 16,8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="32" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700" fill="#F1F5F9">
+          30-Night Risk-Free Trial
+        </text>
+      </g>
+    </g>
+
+    <!-- Official URL Tag -->
+    <g transform="translate(0, 310)">
+      <rect x="0" y="0" width="280" height="42" rx="10" fill="#0284C7" />
+      <text x="24" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">
+        orthocloudrelief.com
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Visual: Graphical Spine & Traction Wave Illustration -->
+  <g transform="translate(1080, 160)">
+    <!-- Back Glow Card -->
+    <rect x="0" y="0" width="420" height="320" rx="24" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+    
+    <!-- Spine Curvature Curve -->
+    <path d="M 80,240 C 130,120 220,100 280,180 C 330,250 360,200 380,140" 
+          stroke="url(#brandGrad)" stroke-width="8" stroke-linecap="round" fill="none" filter="url(#softGlow)" />
+    <path d="M 80,240 C 130,120 220,100 280,180 C 330,250 360,200 380,140" 
+          stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+
+    <!-- Vertebral Acupressure Nodes (C1 - C7) -->
+    <circle cx="95" cy="215" r="7" fill="#38BDF8" />
+    <text x="95" y="245" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C7</text>
+
+    <circle cx="150" cy="145" r="7" fill="#38BDF8" />
+    <text x="150" y="175" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C5</text>
+
+    <circle cx="210" cy="120" r="9" fill="#60A5FA" filter="url(#softGlow)" />
+    <text x="210" y="102" font-family="system-ui, sans-serif" font-size="12" font-weight="900" fill="#38BDF8" text-anchor="middle">PEAK TRACTION</text>
+
+    <circle cx="270" cy="170" r="7" fill="#38BDF8" />
+    <text x="270" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C3</text>
+
+    <circle cx="340" cy="210" r="7" fill="#38BDF8" />
+    <text x="340" y="238" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C1</text>
+
+    <!-- Bottom Stat Pill -->
+    <g transform="translate(60, 270)">
+      <rect x="0" y="0" width="300" height="32" rx="16" fill="#1E293B" />
+      <text x="150" y="21" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" text-anchor="middle">
+        NATURAL 35° LORDOSIS ANGLE
+      </text>
+    </g>
+  </g>
+</svg>
