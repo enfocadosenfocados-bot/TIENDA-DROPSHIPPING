@@ -3,7 +3,7 @@
 import Script from "next/script";
 
 export function PixelScripts() {
-  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+  const metaPixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1419847999476729";
   const tiktokPixelId = process.env.NEXT_PUBLIC_TIKTOK_PIXEL_ID;
   const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID;
   const pinterestTagId = process.env.NEXT_PUBLIC_PINTEREST_TAG_ID;

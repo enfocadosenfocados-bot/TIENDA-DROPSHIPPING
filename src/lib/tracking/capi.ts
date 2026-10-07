@@ -42,7 +42,7 @@ function sha256(value?: string): string | undefined {
  * Envia evento a Meta Conversions API (CAPI) con deduplicación por eventId
  */
 export async function sendMetaCapiEvent(payload: TrackingEventPayload) {
-  const pixelId = process.env.META_PIXEL_ID;
+  const pixelId = process.env.META_PIXEL_ID || process.env.NEXT_PUBLIC_META_PIXEL_ID || "1419847999476729";
   const accessToken = process.env.META_CAPI_ACCESS_TOKEN;
 
   if (!pixelId || !accessToken) {
