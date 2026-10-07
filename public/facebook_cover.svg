@@ -1,134 +1,198 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 624" width="1640" height="624" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 720" width="1640" height="720" fill="none">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090E17" />
-      <stop offset="50%" stop-color="#0F172A" />
-      <stop offset="100%" stop-color="#1E293B" />
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060B14" />
+      <stop offset="45%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#111C35" />
     </linearGradient>
-    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0" />
-    </linearGradient>
-    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+
+    <!-- Vibrant Brand Gradient -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="50%" stop-color="#60A5FA" />
+      <stop offset="60%" stop-color="#60A5FA" />
       <stop offset="100%" stop-color="#818CF8" />
     </linearGradient>
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="blur" />
+
+    <!-- Cyan Glow -->
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Pillow Shading Gradient -->
+    <linearGradient id="pillowGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#0EA5E9" />
+      <stop offset="35%" stop-color="#0284C7" />
+      <stop offset="85%" stop-color="#1E3A8A" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    
+    <linearGradient id="pillowHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#BAE6FD" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="1640" height="624" fill="url(#bgGrad)" />
-  <circle cx="1300" cy="280" r="380" fill="url(#glowGrad)" />
-  <circle cx="200" cy="100" r="240" fill="url(#glowGrad)" opacity="0.4" />
+  <!-- Dark Premium Canvas -->
+  <rect width="1640" height="720" fill="url(#bgGrad2)" />
 
-  <!-- Grid Lines Accent -->
-  <g stroke="#334155" stroke-width="1" opacity="0.15">
-    <line x1="0" y1="156" x2="1640" y2="156" />
-    <line x1="0" y1="312" x2="1640" y2="312" />
-    <line x1="0" y1="468" x2="1640" y2="468" />
-    <line x1="410" y1="0" x2="410" y2="624" />
-    <line x1="820" y1="0" x2="820" y2="624" />
-    <line x1="1230" y1="0" x2="1230" y2="624" />
-  </g>
+  <!-- Background Lighting Accents -->
+  <circle cx="1280" cy="340" r="420" fill="url(#cyanGlow)" />
+  <circle cx="200" cy="160" r="320" fill="url(#cyanGlow)" opacity="0.4" />
 
-  <!-- Left Content: Branding & Value Props -->
-  <g transform="translate(140, 130)">
-    <!-- Badge -->
-    <rect x="0" y="0" width="380" height="36" rx="18" fill="#1E293B" stroke="#0284C7" stroke-width="1.5" />
-    <circle cx="20" cy="18" r="6" fill="#38BDF8" filter="url(#softGlow)" />
-    <text x="36" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="800" fill="#38BDF8" letter-spacing="1">
-      #1 CHIROPRACTOR-APPROVED HOME DEVICE
-    </text>
-
-    <!-- Main Headline -->
-    <text x="0" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="900" fill="#FFFFFF" letter-spacing="-1">
-      ORTHO<tspan fill="url(#brandGrad)">CLOUD</tspan><tspan fill="#38BDF8" font-size="24" dy="-20">™</tspan>
-    </text>
+  <!-- LEFT COLUMN: HIGH-IMPACT BRANDING & HEADLINE -->
+  <g transform="translate(100, 110)">
     
-    <text x="0" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="700" fill="#E2E8F0">
-      Smart Acupressure Cervical Traction Cradle
+    <!-- Top Pill Badge -->
+    <rect x="0" y="0" width="460" height="44" rx="22" fill="#1E293B" stroke="#0284C7" stroke-width="2" />
+    <circle cx="24" cy="22" r="7" fill="#38BDF8" filter="url(#glowEffect)" />
+    <text x="44" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="800" fill="#38BDF8" letter-spacing="1.5">
+      ★ #1 CHIROPRACTOR-APPROVED AT-HOME DEVICE
     </text>
 
-    <text x="0" y="195" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="500" fill="#94A3B8">
-      Restore natural C1-C7 lordotic curvature &amp; melt 8 hours of desk strain in 10 minutes.
-    </text>
-
-    <!-- 3 Bullet Points -->
-    <g transform="translate(0, 230)">
-      <!-- Bullet 1 -->
-      <g transform="translate(0, 0)">
-        <circle cx="12" cy="12" r="10" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5" />
-        <path d="M 8,12 L 11,15 L 16,8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-        <text x="32" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700" fill="#F1F5F9">
-          10-Minute Gravitational Decompression
-        </text>
-      </g>
-
-      <!-- Bullet 2 -->
-      <g transform="translate(340, 0)">
-        <circle cx="12" cy="12" r="10" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5" />
-        <path d="M 8,12 L 11,15 L 16,8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-        <text x="32" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700" fill="#F1F5F9">
-          Fast 3-Day USPS US Delivery
-        </text>
-      </g>
-
-      <!-- Bullet 3 -->
-      <g transform="translate(620, 0)">
-        <circle cx="12" cy="12" r="10" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5" />
-        <path d="M 8,12 L 11,15 L 16,8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-        <text x="32" y="17" font-family="system-ui, -apple-system, sans-serif" font-size="14.5" font-weight="700" fill="#F1F5F9">
-          30-Night Risk-Free Trial
-        </text>
-      </g>
+    <!-- Brand Logo Headline -->
+    <g transform="translate(0, 115)">
+      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="68" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">
+        ORTHO<tspan fill="url(#primaryGrad)">CLOUD</tspan>
+      </text>
+      <text x="475" y="-30" font-family="-apple-system, sans-serif" font-size="28" font-weight="900" fill="#38BDF8">
+        ™
+      </text>
     </g>
 
-    <!-- Official URL Tag -->
-    <g transform="translate(0, 310)">
-      <rect x="0" y="0" width="280" height="42" rx="10" fill="#0284C7" />
-      <text x="24" y="27" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">
+    <!-- Subheadline -->
+    <text x="0" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="700" fill="#F1F5F9" letter-spacing="-0.3">
+      Clinical Acupressure Cervical Traction Cradle
+    </text>
+
+    <!-- Pitch Text -->
+    <text x="0" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="500" fill="#94A3B8">
+      Restores Natural C1-C7 Lordosis &amp; Melts 8 Hours of Desk Strain in 10 Minutes.
+    </text>
+
+    <!-- 3 High-Visibility Benefit Pills (Stacked / Grouped) -->
+    <g transform="translate(0, 260)">
+      
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="360" height="52" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5" />
+        <circle cx="28" cy="26" r="14" fill="#0284C7" fill-opacity="0.2" />
+        <!-- Checkmark -->
+        <path d="M 22,26 L 26,30 L 34,22" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="52" y="32" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">
+          10-Min Daily Decompression
+        </text>
+      </g>
+
+      <!-- Pill 2 -->
+      <g transform="translate(380, 0)">
+        <rect x="0" y="0" width="340" height="52" rx="14" fill="#0F172A" stroke="#334155" stroke-width="1.5" />
+        <circle cx="28" cy="26" r="14" fill="#0284C7" fill-opacity="0.2" />
+        <!-- Checkmark -->
+        <path d="M 22,26 L 26,30 L 34,22" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <text x="52" y="32" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">
+          Fast USPS 3-Day Delivery
+        </text>
+      </g>
+
+    </g>
+
+    <!-- Bottom URL Callout Button -->
+    <g transform="translate(0, 345)">
+      <rect x="0" y="0" width="320" height="54" rx="14" fill="#0284C7" />
+      <text x="32" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF" letter-spacing="0.5">
         orthocloudrelief.com
       </text>
+      <!-- Arrow icon -->
+      <path d="M 265,27 L 278,27 M 273,21 L 279,27 L 273,33" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
     </g>
+
   </g>
 
-  <!-- Right Visual: Graphical Spine & Traction Wave Illustration -->
-  <g transform="translate(1080, 160)">
-    <!-- Back Glow Card -->
-    <rect x="0" y="0" width="420" height="320" rx="24" fill="#0F172A" stroke="#1E293B" stroke-width="2" />
+  <!-- RIGHT COLUMN: BEAUTIFUL 3D PRODUCT GRAPHIC (CERVICAL TRACTION CRADLE) -->
+  <g transform="translate(1040, 110)">
     
-    <!-- Spine Curvature Curve -->
-    <path d="M 80,240 C 130,120 220,100 280,180 C 330,250 360,200 380,140" 
-          stroke="url(#brandGrad)" stroke-width="8" stroke-linecap="round" fill="none" filter="url(#softGlow)" />
-    <path d="M 80,240 C 130,120 220,100 280,180 C 330,250 360,200 380,140" 
-          stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" />
+    <!-- Outer Glow Card Container -->
+    <rect x="0" y="0" width="500" height="500" rx="32" fill="#0B132B" stroke="#1E293B" stroke-width="2" />
+    
+    <!-- Anatomical Spinal Curve Background Grid -->
+    <g opacity="0.2" stroke="#38BDF8" stroke-width="1">
+      <circle cx="250" cy="250" r="180" fill="none" stroke-dasharray="4,4" />
+      <circle cx="250" cy="250" r="120" fill="none" />
+      <line x1="70" y1="250" x2="430" y2="250" />
+      <line x1="250" y1="70" x2="250" y2="430" />
+    </g>
 
-    <!-- Vertebral Acupressure Nodes (C1 - C7) -->
-    <circle cx="95" cy="215" r="7" fill="#38BDF8" />
-    <text x="95" y="245" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C7</text>
+    <!-- 3D Ergonomic Cervical Traction Cradle Shape -->
+    <!-- Base Shadow -->
+    <ellipse cx="250" cy="385" rx="180" ry="35" fill="#000000" opacity="0.6" />
+    
+    <!-- Pillow Body (Anatomical V-Wave Contours) -->
+    <path d="M 100,320 
+             C 120,240 160,200 210,230 
+             C 235,245 250,250 265,250 
+             C 280,250 295,245 320,230 
+             C 370,200 410,240 430,320 
+             C 410,360 370,380 265,380 
+             C 160,380 120,360 100,320 Z" 
+          fill="url(#pillowGrad)" stroke="#38BDF8" stroke-width="3" />
 
-    <circle cx="150" cy="145" r="7" fill="#38BDF8" />
-    <text x="150" y="175" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C5</text>
+    <!-- Top Ergonomic Lip / Lordotic Arch Support -->
+    <path d="M 140,290 
+             C 170,210 200,180 250,180 
+             C 300,180 330,210 360,290 
+             C 320,320 280,330 250,330 
+             C 220,330 180,320 140,290 Z" 
+          fill="url(#pillowHighlight)" opacity="0.4" />
 
-    <circle cx="210" cy="120" r="9" fill="#60A5FA" filter="url(#softGlow)" />
-    <text x="210" y="102" font-family="system-ui, sans-serif" font-size="12" font-weight="900" fill="#38BDF8" text-anchor="middle">PEAK TRACTION</text>
+    <!-- 6 Shiatsu Acupressure Nodes (3 on left, 3 on right) -->
+    <!-- Node Left 1 -->
+    <circle cx="190" cy="255" r="9" fill="#38BDF8" filter="url(#glowEffect)" />
+    <circle cx="190" cy="255" r="5" fill="#FFFFFF" />
+    
+    <!-- Node Left 2 -->
+    <circle cx="215" cy="285" r="9" fill="#38BDF8" filter="url(#glowEffect)" />
+    <circle cx="215" cy="285" r="5" fill="#FFFFFF" />
+    
+    <!-- Node Left 3 -->
+    <circle cx="205" cy="320" r="9" fill="#38BDF8" filter="url(#glowEffect)" />
+    <circle cx="205" cy="320" r="5" fill="#FFFFFF" />
 
-    <circle cx="270" cy="170" r="7" fill="#38BDF8" />
-    <text x="270" y="200" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C3</text>
+    <!-- Node Right 1 -->
+    <circle cx="310" cy="255" r="9" fill="#38BDF8" filter="url(#glowEffect)" />
+    <circle cx="310" cy="255" r="5" fill="#FFFFFF" />
+    
+    <!-- Node Right 2 -->
+    <circle cx="285" cy="285" r="9" fill="#38BDF8" filter="url(#glowEffect)" />
+    <circle cx="285" cy="285" r="5" fill="#FFFFFF" />
+    
+    <!-- Node Right 3 -->
+    <circle cx="295" cy="320" r="9" fill="#38BDF8" filter="url(#glowEffect)" />
+    <circle cx="295" cy="320" r="5" fill="#FFFFFF" />
 
-    <circle cx="340" cy="210" r="7" fill="#38BDF8" />
-    <text x="340" y="238" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#94A3B8" text-anchor="middle">C1</text>
-
-    <!-- Bottom Stat Pill -->
-    <g transform="translate(60, 270)">
-      <rect x="0" y="0" width="300" height="32" rx="16" fill="#1E293B" />
-      <text x="150" y="21" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" text-anchor="middle">
-        NATURAL 35° LORDOSIS ANGLE
+    <!-- Floating Badge: Acupressure Shiatsu Nodes -->
+    <g transform="translate(110, 50)">
+      <rect x="0" y="0" width="280" height="40" rx="20" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5" />
+      <circle cx="22" cy="20" r="6" fill="#38BDF8" />
+      <text x="38" y="25" font-family="-apple-system, sans-serif" font-size="13" font-weight="800" fill="#F1F5F9">
+        6 SHIATSU TRIGGER NODES
       </text>
     </g>
+
+    <!-- Bottom Alignment Pill -->
+    <g transform="translate(90, 425)">
+      <rect x="0" y="0" width="320" height="44" rx="22" fill="#0284C7" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1.5" />
+      <text x="160" y="27" font-family="-apple-system, sans-serif" font-size="14" font-weight="800" fill="#38BDF8" text-anchor="middle">
+        NATURAL 35° CERVICAL ANGLE
+      </text>
+    </g>
+
   </g>
+
 </svg>
