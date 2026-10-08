@@ -169,7 +169,7 @@ export const productConfig = {
     salePrice: 19.99,
     discountPercent: 60,
     sku: "OCL-SILK-CASE-01",
-    image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=800&q=80",
+    image: "/images/product/product_hero.jpg",
     description: "Custom contoured to fit the OrthoCloud cradle. Ultra-soft breathable mulberry silk keeps skin 4.5°F cooler and protects the high-density foam core.",
     urgencySeconds: 600
   },

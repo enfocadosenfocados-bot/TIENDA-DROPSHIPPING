@@ -5,12 +5,15 @@ export async function GET() {
   const domain = storeConfig.domain.replace(/\/$/, "");
 
   const toAbsoluteUrl = (img: string) => {
-    if (img.startsWith("http://") || img.startsWith("https://")) {
-      return img;
+    let url = img;
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      const cleanPath = url.startsWith("/") ? url : `/${url}`;
+      url = `${domain}${cleanPath}`;
     }
-    const cleanPath = img.startsWith("/") ? img : `/${img}`;
-    return `${domain}${cleanPath}`;
+    return url.replace(/&/g, "&amp;");
   };
+
+  const escapeXmlUrl = (url: string) => url.replace(/&/g, "&amp;");
 
   // 1. Variantes individuales
   const variantsXml = productConfig.variants.map((v) => `
@@ -18,7 +21,7 @@ export async function GET() {
       <g:id>${v.sku}</g:id>
       <g:title><![CDATA[${productConfig.name} - ${v.name}]]></g:title>
       <g:description><![CDATA[Release 8 Hours of Desk Strain in 10 Minutes: Restores Natural C1-C7 Curvature & Melts Upper Trap Tension. High-density ergonomic memory foam, 3D cooling cover. 30-night trial.]]></g:description>
-      <g:link>${domain}?variant=${v.id}</g:link>
+      <g:link>${escapeXmlUrl(`${domain}?variant=${v.id}`)}</g:link>
       <g:image_link>${toAbsoluteUrl(v.image)}</g:image_link>
       <g:brand><![CDATA[${storeConfig.storeName}]]></g:brand>
       <g:condition>new</g:condition>
@@ -36,7 +39,7 @@ export async function GET() {
       <g:id>OCL-BDL-${b.quantity}X</g:id>
       <g:title><![CDATA[${productConfig.name} (${b.title})]]></g:title>
       <g:description><![CDATA[Special multi-pack bundle for home & office. ${b.freeBonus || "Free USPS Priority Shipping"}. Restores healthy cervical spine lordosis naturally.]]></g:description>
-      <g:link>${domain}#buy-section</g:link>
+      <g:link>${escapeXmlUrl(`${domain}#buy-section`)}</g:link>
       <g:image_link>${toAbsoluteUrl(productConfig.images[1] || productConfig.images[0])}</g:image_link>
       <g:brand><![CDATA[${storeConfig.storeName}]]></g:brand>
       <g:condition>new</g:condition>
@@ -55,7 +58,7 @@ export async function GET() {
       <g:id>OCL-SLK-SLV-01</g:id>
       <g:title><![CDATA[OrthoCloud™ ${upsell.title}]]></g:title>
       <g:description><![CDATA[${upsell.description} 100% Pure Mulberry Silk designed exclusively for OrthoCloud cervical contours.]]></g:description>
-      <g:link>${domain}</g:link>
+      <g:link>${escapeXmlUrl(domain)}</g:link>
       <g:image_link>${toAbsoluteUrl(upsell.image)}</g:image_link>
       <g:brand><![CDATA[${storeConfig.storeName}]]></g:brand>
       <g:condition>new</g:condition>
