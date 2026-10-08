@@ -79,10 +79,12 @@ export const productConfig = {
   googleCategoryId: "Health & Beauty > Health Care > Supports & Braces",
   
   images: [
-    "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1000&q=80",
-    "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1000&q=80"
+    "/images/product/product_hero.jpg",
+    "/images/product/product_traction_dual.jpg",
+    "/images/product/product_chiro_spine.jpg",
+    "/images/product/product_blue_angle.jpg",
+    "/images/product/product_daily_routine.jpg",
+    "/images/product/product_nodes_anatomy.jpg"
   ],
 
   variants: [
@@ -91,7 +93,7 @@ export const productConfig = {
       name: "Clinical Ortho Blue",
       sku: "OCL-TRC-BLU-01",
       color: "#0284C7",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80",
+      image: "/images/product/product_traction_dual.jpg",
       inStock: true
     },
     {
@@ -99,7 +101,7 @@ export const productConfig = {
       name: "Onyx Carbon Slate",
       sku: "OCL-TRC-BLK-02",
       color: "#1E293B",
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80",
+      image: "/images/product/variant_black.jpg",
       inStock: true
     },
     {
@@ -107,7 +109,7 @@ export const productConfig = {
       name: "Rose Quartz Gentle",
       sku: "OCL-TRC-PNK-03",
       color: "#F472B6",
-      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80",
+      image: "/images/product/variant_pink.jpg",
       inStock: true
     }
   ] as ProductVariant[],
