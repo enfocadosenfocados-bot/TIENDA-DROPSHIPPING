@@ -4,13 +4,24 @@ import { productConfig, storeConfig } from "@/config/product";
 export async function GET() {
   const domain = storeConfig.domain.replace(/\/$/, "");
 
+  const toAbsoluteUrl = (img: string) => {
+    let url = img;
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      const cleanPath = url.startsWith("/") ? url : `/${url}`;
+      url = `${domain}${cleanPath}`;
+    }
+    return url.replace(/&/g, "&amp;");
+  };
+
+  const escapeXmlUrl = (url: string) => url.replace(/&/g, "&amp;");
+
   const itemsXml = productConfig.variants.map((v) => `
     <item>
       <g:id>${v.sku}</g:id>
       <g:title><![CDATA[${productConfig.name} - ${v.name}]]></g:title>
       <g:description><![CDATA[${productConfig.tagline}. Perfect for neck pain, cervical spine alignment, and deep sleep.]]></g:description>
-      <g:link>${domain}?variant=${v.id}&amp;utm_source=pinterest</g:link>
-      <g:image_link>${v.image}</g:image_link>
+      <g:link>${escapeXmlUrl(`${domain}?variant=${v.id}&utm_source=pinterest`)}</g:link>
+      <g:image_link>${toAbsoluteUrl(v.image)}</g:image_link>
       <g:price>${productConfig.price.toFixed(2)} USD</g:price>
       <g:availability>${v.inStock ? "in stock" : "out of stock"}</g:availability>
       <g:condition>new</g:condition>

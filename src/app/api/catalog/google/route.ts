@@ -4,13 +4,24 @@ import { productConfig, storeConfig } from "@/config/product";
 export async function GET() {
   const domain = storeConfig.domain.replace(/\/$/, "");
 
+  const toAbsoluteUrl = (img: string) => {
+    let url = img;
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+      const cleanPath = url.startsWith("/") ? url : `/${url}`;
+      url = `${domain}${cleanPath}`;
+    }
+    return url.replace(/&/g, "&amp;");
+  };
+
+  const escapeXmlUrl = (url: string) => url.replace(/&/g, "&amp;");
+
   const itemsXml = productConfig.variants.map((v) => `
     <item>
       <g:id>${v.sku}</g:id>
       <g:title><![CDATA[${productConfig.name} - ${v.name}]]></g:title>
       <g:description><![CDATA[${productConfig.tagline}. Chiropractor-designed ergonomic cervical alignment. 50D memory foam.]]></g:description>
-      <g:link>${domain}?variant=${v.id}&amp;utm_source=google_shopping</g:link>
-      <g:image_link>${v.image}</g:image_link>
+      <g:link>${escapeXmlUrl(`${domain}?variant=${v.id}&utm_source=google_shopping`)}</g:link>
+      <g:image_link>${toAbsoluteUrl(v.image)}</g:image_link>
       <g:brand><![CDATA[${storeConfig.storeName}]]></g:brand>
       <g:condition>new</g:condition>
       <g:availability>${v.inStock ? "in_stock" : "out_of_stock"}</g:availability>
@@ -21,7 +32,7 @@ export async function GET() {
       <g:item_group_id>${productConfig.id}</g:item_group_id>
       <g:shipping>
         <g:country>US</g:country>
-        <g:service>USPS Standard</g:service>
+        <g:service>USPS Priority</g:service>
         <g:price>0.00 USD</g:price>
       </g:shipping>
     </item>`).join("");
