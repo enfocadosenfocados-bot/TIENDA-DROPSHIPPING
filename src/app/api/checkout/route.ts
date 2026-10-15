@@ -10,6 +10,18 @@ export async function POST(req: NextRequest) {
     const bundle = productConfig.bundles.find((b) => b.id === bundleId) || productConfig.bundles[1];
     const variant = productConfig.variants.find((v) => v.id === variantId) || productConfig.variants[0];
 
+    const domain = storeConfig.domain.replace(/\/$/, "");
+    const toAbsoluteUrl = (img?: string) => {
+      if (!img) return undefined;
+      if (img.startsWith("http://") || img.startsWith("https://")) {
+        return img;
+      }
+      const clean = img.startsWith("/") ? img : `/${img}`;
+      return `${domain}${clean}`;
+    };
+
+    const imageUrl = toAbsoluteUrl(variant.image);
+
     // Construir línea de productos para Stripe
     const lineItems: Array<{
       price_data: {
@@ -29,7 +41,7 @@ export async function POST(req: NextRequest) {
           product_data: {
             name: `${productConfig.name} (${bundle.title})`,
             description: `Variant: ${variant.name} | ${bundle.quantity} units pack`,
-            images: [variant.image],
+            images: imageUrl ? [imageUrl] : undefined,
           },
           unit_amount: Math.round(bundle.totalPrice * 100),
         },
